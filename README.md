@@ -10,7 +10,7 @@ The pipeline integrates:
 - HMM construction
 - Model testing and performance evaluation
 
-For details on data cleaning, manual curation, and the full processing workflow, see `docs/workflow_full.md`
+For details on data cleaning, manual curation, and the full processing workflow, see [`full_workflow.md`](full_workflow.md)
 
 ---
 
