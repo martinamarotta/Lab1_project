@@ -27,7 +27,7 @@ For details on data cleaning, manual curation, and the full processing workflow,
     - Resolution ≤ 3.5 Å
         
     - Sequence length 45–80 residues
-    Output: rcsb_pdb_custom_report_20250505053111.csv
+    Output: pdb_kunitz.csv
 
 ### 2-3. **Dataset Preparation and Structural Alignment**
 
