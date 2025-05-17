@@ -19,7 +19,7 @@ For details on data cleaning, manual curation, and the full processing workflow,
 ### 1. **Data Collection**
 
 - Go to [UniProt](https://www.uniprot.org/) :
-	- Retrieve reviewed protein sequences containing the Kunitz domain (Pfam: PF00014): uniprotkb_ft_domain_Kunitz_AND_xref_pfa_2025_05_05.fasta
+	- Retrieve reviewed protein sequences containing the Kunitz domain (Pfam: PF00014): all_uniprot_kunitz.fasta
 	- Download all proteins sequences from the SwissProt database (https://www.uniprot.org/help/downloads) in FASTA format: uniprot_sprot.fasta 
     
 - Collect **3D structures** from [RCSB PDB](https://www.rcsb.org/) containing PF00014, filtered by:
@@ -31,7 +31,7 @@ For details on data cleaning, manual curation, and the full processing workflow,
 
 ### 2-3. **Dataset Preparation and Structural Alignment**
 
-- Convert the rcsb_pdb_custom_report_20250505053111.csv file containing the structural data into a FASTA format: pdb_kunitz.fasta
+- Convert the pdb_kunitz.csv file containing the structural data into a FASTA format: pdb_kunitz.fasta
     
 - Remove redundant sequences using **CD-HIT**: pdb_kunitz_nr.fasta
     
@@ -45,7 +45,7 @@ For details on data cleaning, manual curation, and the full processing workflow,
 
 ### 5. **Positive and Negative Dataset Generation**
 
-- Create a database containing all sequences of the uniprotkb_ft_domain_Kunitz_AND_xref_pfa_2025_05_05.fasta file by using BLAST.
+- Create a database containing all sequences of the all_uniprot_kunitz.fasta file by using BLAST.
     
 - Use BLASTP to **detect and flag redundant sequences** (>95% identity, ≥50 aligned residues). Obtain the file without the redundant sequences using the Python script [`get_ids.py`](get_ids.py) : ok_kunitz.fasta
 
